@@ -23,3 +23,9 @@ export class AppComponent implements OnInit {
   }
 
 }
+
+//Paso de información entre componentes:
+//1. A través de @Inputs y @Outputs
+//2. A través de inyección de constructores de componentes hijos @ViewChild, @ContentChile o ContentChildren
+//3. A través de servicios (Promesas, Ovsercables, etc) ==> NGRX (Gestión del estado de la aplicación)
+//4. A través de parametros en la ruta

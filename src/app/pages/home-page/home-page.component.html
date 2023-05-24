@@ -1,7 +1,12 @@
 <h1>HOME PAGE</h1>
 <h3>!Bienvenido¡</h3>
 
+<h4 *ngIf="contactoSeleccionado">Haz seleccionado a {{ contactoSeleccionado.nombre }}</h4>
+
 <!--Hacer un Login-->
-<a routerLink="/login">Iniciar Sesión</a>
+<a routerLink="/login"*ngIf="!token">Iniciar Sesión</a>
 
 <button (click)="navegarAContact()">Ver tus contactos</button>
+
+<a [routerLink]="['/contacts']" [queryParams]="{sexo: 'mujer'}">Amigas</a>
+<a [routerLink]="['/contacts']" [queryParams]="{sexo: 'hombre'}">Amigos</a>
